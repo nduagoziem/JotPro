@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JotPro is a JavaScript note-taking application that allows users to create, edit, delete, and search notes.">
+    <title>JotPro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Website Loading -->
+    <div class="page-load-wrapper" id="pageLoadWrapper">
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>    
+    </div>
+    
+    <!-- Nav Section -->
+     <nav class="container-fluid navbar">
+        <div class="nav-container container d-flex justify-content-between">
+            <a href="#" class="logo navbar-brand">JotPro</a>
+            <img src="Images/settings.svg" class="settings-menu img-fluid" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+        </div>
+
+        <!-- OffCanvas Menu Start -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <a href="#" class="logo navbar-brand" id="offLogo">JotPro</a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="offClose"></button>
+            </div> <hr>
+            <div class="offcanvas-body">
+                <div class="bg-btn-wrapper d-flex justify-content-between">
+                    <button class="bg-btn light-bg-btn"> <span class="fa-solid fa-sun"></span>Light</button>
+                    <button class="bg-btn dark-bg-btn"> <span class="fa-solid fa-moon"></span>Dark</button>    
+                </div>
+                
+                    <input type="text" name="search" class="mt-3" id="searchInput" placeholder="search">
+
+                <div class="dropdown mt-3">
+                    <button class="dropdown-btn btn dropdown-toggle" id="dropDownBtn" type="button" data-bs-toggle="dropdown">
+                        Background and Theme
+                    </button>
+                    <ul class="bg-image-wrapper dropdown-menu">
+                        <img src="Images/villa-bg.jpg" alt="Villa Background Image" id="villaBg">
+                        <img src="Images/night-bg.jpg" alt="Night Background Image" id="nightBg">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Menu End -->
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main-section container-fluid">
+
+        <div class="note-container container">
+
+            <div class="toggle-section-btn-wrapper">
+                <button class="toggle-section-btn" id="homeSectionBtn">Home</button>
+                <button class="toggle-section-btn" id="noteSectionBtn">Note</button>
+            </div>
+
+            <!-- Home Section Start -->
+            <section class="home-section mt-3" id="homeSection">
+
+                <div class="home-content-wrapper">
+
+                    <div class="home-top-content">
+                        <h6 class="home-title">This is a title</h6>
+                    </div>
+
+                    <div class="home-bottom-content">
+
+                        <span>June 25, 2024</span>
+                        <div class="home-content-settings">
+                            <span class="fa-solid fa-trash"></span>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <!-- Home Section End -->
+
+            <!-- Note Section Start -->
+            <section class="note-section mt-4" id="noteSection">
+
+                <header class="d-flex justify-content-center">
+                    <input type="text" placeholder="Title" id="noteTitle">
+                </header>
+    
+                <section class="d-flex justify-content-between mt-3" id="noteIconsWrapper">
+                    <button class="bold-btn"><span class="fa-solid fa-bold fa-2x"></span></button>
+                    <button class="italic-btn"><span class="fa-solid fa-italic fa-2x"></span></button>
+                    <button class="underline-btn"><span class="fa-solid fa-underline fa-2x"></span></button>
+                    <button class="ul-list-btn"><span class="fa-solid fa-list fa-2x"></span></button>
+                    <button class="save-btn"><span class="fa-solid fa-save fa-2x"></span></button>
+                </section>
+    
+                <div class="mt-4 d-block" id="noteBody" contenteditable="true"></div>
+        
+            </section>        
+            <!-- Note Section End -->
+
+        </div>
+    </main>
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

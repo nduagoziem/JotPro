@@ -1,0 +1,8 @@
+{
+  "name": "jot-pro",
+  "version": "1.0.0",
+  "description": "Javascript note app and to-do list app",
+  "main": "main.js",
+  "author": "NDUAGOZIEM",
+  "license": "MIT"
+}
