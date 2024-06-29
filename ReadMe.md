@@ -12,7 +12,7 @@ JotPro is a JavaScript note-taking application that allows users to create, edit
 
 ## Demo
 
-[https://www.jotpro.vercel.app]
+[https://jotpro.vercel.app]
 
 ## Features
 
